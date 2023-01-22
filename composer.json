@@ -1,0 +1,27 @@
+{
+	"name": "benlumia007/backdrop-template",
+	"description": "A system for providing flexible template hierarchy and custom templates for ClassicPress and WordPress.",
+	"keywords": [ "classicpress", "wordpress" ],
+	"homepage": "https://github.com/benlumia007/backdrop-template",
+	"license": "GPL-2.0-or-later",
+	"authors": [
+		{
+			"name": "Benjamin Lu",
+			"email": "benlumia007@gmail.com",
+			"homepage": "https://benjlu.com",
+			"role": "Developer"
+		}
+	],
+	"autoload": {
+		"psr-4": {
+			"Backdrop\\Template\\": "src"
+		},
+		"files": [
+			"src/function-helpers.php"
+		]
+	},
+	"require": {
+		"php": ">=7.0",
+		"benlumia007/backdrop": "^2.0"
+	}
+}
