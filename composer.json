@@ -17,6 +17,7 @@
 			"Backdrop\\Template\\": "src"
 		},
 		"files": [
+			"src/View/functions-view.php",
 			"src/functions-helpers.php"
 		]
 	},
