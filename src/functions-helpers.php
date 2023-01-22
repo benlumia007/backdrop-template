@@ -77,8 +77,6 @@ if ( ! function_exists( __NAMESPACE__ . '\\locations' ) ) {
 
 		$path = ltrim( path(), '/' );
 
-		echo $path;
-
 		// Add active theme path.
 		$locations = [ get_stylesheet_directory() . "/{$path}" ];
 
