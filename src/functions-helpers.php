@@ -82,6 +82,7 @@ if ( ! function_exists( __NAMESPACE__ . '\\locations' ) ) {
 
 		// If child theme, add parent theme path second.
 		if ( is_child_theme() ) {
+
 			$locations[] = get_theme_file_path( path() );
 		}
 
@@ -103,6 +104,7 @@ if ( ! function_exists( __NAMESPACE__ . '\\filter_templates'  ) ) {
 		$path = path();
 
 		if ( $path ) {
+
 			array_walk( $templates, function( &$template, $key ) use ( $path ) {
 
 				$template = ltrim( str_replace( $path, '', $template ), '/' );
