@@ -40,10 +40,6 @@ class Templates extends Collection {
 	 */
 	public function add( string $name, $value ) {
 
-		$path = ltrim( trailingslashit( path( 'templates' ) ) );
-
-		$name = $path . $name;
-
 		parent::add( $name, new Template( $name, $value ) );
 	}
 }
