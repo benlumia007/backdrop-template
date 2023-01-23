@@ -21,7 +21,7 @@
 namespace Backdrop\Template\Hierarchy;
 
 use Backdrop\Template\Hierarchy\Contracts\Hierarchy;
-use function Backdrop\Template\filter_templates;
+use function Backdrop\Template\Helpers\filter_templates;
 use WP_User;
 
 /**
