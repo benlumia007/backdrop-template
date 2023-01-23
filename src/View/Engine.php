@@ -9,7 +9,7 @@
  * @package   Backdrop
  * @author    Benjamin Lu <benlumia007@gmail.com>
  * @copyright 2019-2023. Benjamin Lu
- * @link      https://github.com/benlumia007/backdrop-template-view
+ * @link      https://github.com/benlumia007/backdrop-template
  * @license   https://www.gnu.org/licenses/gpl-2.0.html
  */
 
@@ -21,7 +21,7 @@ namespace Backdrop\Template\View;
 use Backdrop\Proxies\App;
 
 /**
- * Egine class
+ * Engine class
  *
  * @since  1.0.0
  * @access public

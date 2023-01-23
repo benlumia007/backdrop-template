@@ -19,7 +19,6 @@
 namespace Backdrop\Template\Manager;
 
 use Backdrop\Tools\Collection;
-use function Backdrop\Template\Helpers\path;
 
 /**
  * Template collection class.
