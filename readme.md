@@ -7,12 +7,13 @@ This feature is used for setting up and rendering template files, and it is simi
 By default, the templates is located at `resources/views`, you can change the location by using a filter to change the templates location
 <pre>
 add_filter( 'backdrop/template/path', function() {
-	return  'public/views';
+
+    return  'public/views';
 } );
 </pre>
 
 ## Hierarchy System
-
+The hierarchy system is smarter and more flexible template hierarchy for ClassicPress and WordPress.
 
 ## Requirements
 * ClassicPress 1.4+
