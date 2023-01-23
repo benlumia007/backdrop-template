@@ -15,6 +15,11 @@ add_filter( 'backdrop/template/path', function() {
 ## Hierarchy System
 The hierarchy system is smarter and more flexible template hierarchy for ClassicPress and WordPress.
 
+## Custom Templates System
+Custom templates for registering custom post templates, it works for any object type (e.g., post, term, user, etc.), but does not add any UI elements of its own.
+
+The major difference between this and the typical WordPress page template system is that the template doesn't have to exist for registration. It also defaults to supporting all post types instead of just page.
+
 ## Requirements
 * ClassicPress 1.4+
 * WordPress 4.9+
