@@ -24,7 +24,7 @@
  */
 namespace Backdrop\Template\View;
 
-use function Backdrop\Template\locate as locate_template;
+use function Backdrop\Template\Helpers\locate as locate_template;
 
 /**
  * View class.
