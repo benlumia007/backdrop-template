@@ -17,7 +17,6 @@
  * Define namespace
  */
 namespace Backdrop\Template\Manager;
-use Backdrop\Template\Manager\Contracts\Template as TemplateContract;
 
 /**
  * Creates a new object template.
@@ -25,7 +24,7 @@ use Backdrop\Template\Manager\Contracts\Template as TemplateContract;
  * @since  1.0.0
  * @access public
  */
-class Template implements TemplateContract {
+class Template {
 
 	/**
 	 * Type of template. By default, we'll assume this is a post template,
