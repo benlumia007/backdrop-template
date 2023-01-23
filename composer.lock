@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "df488813ff2f354bb644f37fbae268de",
+    "content-hash": "2f8db57a7d89d4401b7aeef845a84ba2",
     "packages": [
         {
             "name": "benlumia007/backdrop",
@@ -151,6 +151,52 @@
                 "source": "https://github.com/benlumia007/backdrop-template-helpers/tree/1.0.0"
             },
             "time": "2023-01-19T23:23:48+00:00"
+        },
+        {
+            "name": "benlumia007/backdrop-tools",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/benlumia007/backdrop-tools.git",
+                "reference": "20aabb07c7c832257b9066b29966ce3bacda5924"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/benlumia007/backdrop-tools/zipball/20aabb07c7c832257b9066b29966ce3bacda5924",
+                "reference": "20aabb07c7c832257b9066b29966ce3bacda5924",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Backdrop\\Tools\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Benjamin Lu",
+                    "email": "benlumia007@gmail.com",
+                    "homepage": "https://benjlu.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A core that helps you build amazing themes",
+            "homepage": "https://github.com/benlumia007/backdrop-tools",
+            "keywords": [
+                "wordpress"
+            ],
+            "support": {
+                "issues": "https://github.com/benlumia007/backdrop-tools/issues",
+                "source": "https://github.com/benlumia007/backdrop-tools/tree/1.0.0"
+            },
+            "time": "2023-01-19T23:57:25+00:00"
         }
     ],
     "packages-dev": [],

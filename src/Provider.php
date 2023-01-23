@@ -20,6 +20,7 @@ use Backdrop\Core\ServiceProvider;
 use ReflectionException;
 use Backdrop\Template\Hierarchy\Component as Hierarchy;
 use Backdrop\Template\Hierarchy\Contracts\Hierarchy as HierarchyContracts;
+use Backdrop\Template\Manager\Component as Manager;
 use Backdrop\Template\View\Engine;
 
 /**
@@ -42,6 +43,9 @@ class Provider extends ServiceProvider {
 		// a single instance of the Hierarchy
 		$this->app->singleton( HierarchyContracts::class, Hierarchy::class );
 
+		// Bind a single instance of the Manager.
+		$this->app->singleton( Manager::class );
+
 		// Bind a single instance of the engine contract.
 		$this->app->singleton( Engine::class );
 	}
@@ -57,5 +61,6 @@ class Provider extends ServiceProvider {
 	public function boot() {
 
 		$this->app->resolve( Hierarchy::class )->boot();
+		$this->app->resolve( Manager::class )->boot();
 	}
 }
