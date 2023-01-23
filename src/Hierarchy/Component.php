@@ -89,6 +89,7 @@ class Component implements Hierarchy {
 
 		// System to capture template hierarchy.
 		foreach( $this->types as $type ) {
+
 			// Capture the template hierarchy for each type.
 			add_filter( "{$type}_template_hierarchy", [ $this, 'templateHierarchy' ], PHP_INT_MAX );
 
@@ -155,6 +156,7 @@ class Component implements Hierarchy {
 	 *
 	 * @since  1.0.0
 	 * @access public
+	 * @param $templates;
 	 * @return array
 	 */
 	public function templateHierarchy( $templates ): array {
