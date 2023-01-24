@@ -39,7 +39,7 @@ class Engine {
 	 * @param array|Collection	$data
 	 * @return View
 	 */
-	public function view(string $name, array $slugs = [], $data = [] ): View {
+	public function view( string $name, array $slugs = [], $data = [] ): View {
 
 		if ( ! $data instanceof Collection ) {
 

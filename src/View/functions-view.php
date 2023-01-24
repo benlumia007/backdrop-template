@@ -46,7 +46,7 @@ if ( ! function_exists( __NAMESPACE__ . '\\display' ) ) {
 	 */
 	function display(string $name, $slugs = [], $data = [] ) {
 
-		view( $name, $slugs )->display();
+		view( $name, $slugs, $data )->display();
 	}
 }
 
@@ -63,6 +63,6 @@ if ( ! function_exists( __NAMESPACE__ . '\\render' ) ) {
 	 */
 	function render(string $name, $slugs = [], $data = [] ): string {
 
-		return view( $name, $slugs )->render();
+		return view( $name, $slugs, $data )->render();
 	}
 }
