@@ -14,6 +14,7 @@
 namespace Backdrop\Template\View;
 
 use Backdrop\Proxies\App;
+use Backdrop\Template\View\Contracts\Engine;
 use Backdrop\Tools\Collection;
 
 if ( ! function_exists( __NAMESPACE__ . '\\view' ) ) {
