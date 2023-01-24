@@ -83,7 +83,7 @@ class View {
 	 * @param	object 			$data
 	 * @return void
 	 */
-	public function __construct(string $name, array $slugs = [], $data = null ) {
+	public function __construct( string $name, array $slugs = [], $data = null ) {
 
 		$this->name  = $name;
 		$this->slugs = ( array ) $slugs;
