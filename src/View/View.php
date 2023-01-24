@@ -79,7 +79,7 @@ class View {
 	 *
 	 * @param string $name
 	 * @param string|array $slugs
-	 * @param Collection|null $data
+	 * @param object $data
 	 * @since    1.0.0
 	 * @access    public
 	 */
