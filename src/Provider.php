@@ -53,7 +53,7 @@ class Provider extends ServiceProvider {
 		$this->app->singleton( EngineContract::class, Engine::class );
 
 		// Bind the view contract
-		$this->app-bind( ViewContract::class, View::class );
+		$this->app->bind( ViewContract::class, View::class );
 	}
 
 	/**
