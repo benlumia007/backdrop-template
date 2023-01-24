@@ -56,6 +56,15 @@ class View {
 	protected $slugs = [];
 
 	/**
+	 * An array of data that is passed into the view template.
+	 *
+	 * @since  1.0.0
+	 * @access protected
+	 * @var    array
+	 */
+	protected $data = [];
+
+	/**
 	 * The template filename.
 	 *
 	 * @since  1.0.0
@@ -67,19 +76,23 @@ class View {
 	/**
 	 * Sets up the view properties.
 	 *
-	 * @since  1.0.0
-	 * @access public
-	 * @param string $name
-	 * @param string|array $slugs
+	 * @since  	1.0.0
+	 * @access 	public
+	 * @param 	string 			$name
+	 * @param	string|array	$slugs
+	 * @param	object 			$data
+	 * @return void
 	 */
-	public function __construct( string $name, array $slugs = [] ) {
+	public function __construct(string $name, array $slugs = [], $data = null ) {
 
 		$this->name  = $name;
 		$this->slugs = ( array ) $slugs;
+		$this->data = $data;
 
 		// Apply filters after all the properties have been assigned.
 		// This way, the full object is available to filters.
 		$this->slugs = apply_filters( "backdrop/template/view/{$this->name}/slugs", $this->slugs, $this );
+		$this->data  = apply_filters( "backdrop/template/view/{$this->name}/data",  $this->data,  $this );
 	}
 
 	/**
@@ -103,7 +116,7 @@ class View {
 	 */
 	public function slugs(): array {
 
-		return (array) $this->slugs;
+		return ( array ) $this->slugs;
 	}
 
 	/**
@@ -118,11 +131,13 @@ class View {
 
 		// Uses the slugs to build a hierarchy.
 		foreach ( $this->slugs as $slug ) {
+
 			$templates[] = "{$this->name}/{$slug}.php";
 		}
 
 		// Add in a `default.php` template.
 		if ( ! in_array( 'default', $this->slugs ) ) {
+
 			$templates[] = "{$this->name}/default.php";
 		}
 
@@ -155,6 +170,7 @@ class View {
 	public function template(): string {
 
 		if ( is_null( $this->template ) ) {
+
 			$this->template = $this->locate();
 		}
 

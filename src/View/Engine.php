@@ -19,6 +19,7 @@
 namespace Backdrop\Template\View;
 
 use Backdrop\Proxies\App;
+use Backdrop\Tools\Collection;
 
 /**
  * Engine class
@@ -33,13 +34,21 @@ class Engine {
 	 *
 	 * @since  1.0.0
 	 * @access public
-	 * @param  string            $name
-	 * @param  array|string      $slugs
+	 * @param  string			$name
+	 * @param  array|string		$slugs
+	 * @param array|Collection	$data
 	 * @return View
 	 */
-	public function view( string $name, array $slugs = [] ): View {
+	public function view(string $name, array $slugs = [], $data = [] ): View {
 
-		return App::resolve( View::class, compact( 'name', 'slugs' ) );
+		if ( ! $data instanceof Collection ) {
+
+			$data = new Collection( ( array ) $data );
+		}
+
+		$data->add( 'engine', $this );
+
+		return App::resolve( View::class, compact( 'name', 'slugs', 'data' ) );
 	}
 
 	/**
@@ -49,11 +58,12 @@ class Engine {
 	 * @access public
 	 * @param  string           $name
 	 * @param  array|string     $slugs
+	 * @param  array|Collection	$data
 	 * @return void
 	 */
-	public function display( string $name, array $slugs = [] ) {
+	public function display( string $name, array $slugs = [], $data = [] ) {
 
-		$this->view( $name, $slugs )->display();
+		$this->view( $name, $slugs, $data )->display();
 	}
 
 	/**
@@ -61,12 +71,13 @@ class Engine {
 	 *
 	 * @since  1.0.0
 	 * @access public
-	 * @param  string            $name
-	 * @param  array|string      $slugs
+	 * @param  string			$name
+	 * @param  array|string		$slugs
+	 * @param  array|Collection	$data
 	 * @return string
 	 */
-	public function render( string $name, array $slugs = [] ): string {
+	public function render(string $name, array $slugs = [], $data = [] ): string {
 
-		return $this->view( $name, $slugs )->render();
+		return $this->view( $name, $slugs, $data )->render();
 	}
 }
