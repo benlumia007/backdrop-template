@@ -50,10 +50,10 @@ class Provider extends ServiceProvider {
 		$this->app->singleton( Manager::class );
 
 		// Bind a single instance of the engine contract.
-		$this->app->singleton( EngineContract::class, Engine::class );
+		$this->app->singleton(  Engine::class );
 
 		// Bind the view contract
-		$this->app->bind( ViewContract::class, View::class );
+		$this->app->bind(  View::class );
 	}
 
 	/**
