@@ -39,7 +39,7 @@ class Engine {
 	 * @param array|Collection	$data
 	 * @return View
 	 */
-	public function view( string $name, array $slugs = [], $data = [] ): View {
+	public function view( string $name, $slugs = [], $data = [] ): View {
 
 		if ( ! $data instanceof Collection ) {
 
@@ -61,7 +61,7 @@ class Engine {
 	 * @param  array|Collection	$data
 	 * @return void
 	 */
-	public function display( string $name, array $slugs = [], $data = [] ) {
+	public function display( string $name, $slugs = [], $data = [] ) {
 
 		$this->view( $name, $slugs, $data )->display();
 	}
@@ -76,7 +76,7 @@ class Engine {
 	 * @param  array|Collection	$data
 	 * @return string
 	 */
-	public function render(string $name, array $slugs = [], $data = [] ): string {
+	public function render(string $name, $slugs = [], $data = [] ): string {
 
 		return $this->view( $name, $slugs, $data )->render();
 	}
