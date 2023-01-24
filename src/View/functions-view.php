@@ -27,7 +27,7 @@ if ( ! function_exists( __NAMESPACE__ . '\\view' ) ) {
 	 * @param  array|Collection $data
 	 * @return View
 	 */
-	function view(string $name, $slugs = [], $data = [] ): View {
+	function view( string $name, $slugs = [], $data = [] ): View {
 
 		return App::resolve( Engine::class )->view( $name, $slugs, $data );
 	}
@@ -44,7 +44,7 @@ if ( ! function_exists( __NAMESPACE__ . '\\display' ) ) {
 	 * @param  array|Collection $data
 	 * @return void
 	 */
-	function display(string $name, $slugs = [], $data = [] ) {
+	function display( string $name, $slugs = [], $data = [] ) {
 
 		view( $name, $slugs, $data )->display();
 	}
@@ -61,7 +61,7 @@ if ( ! function_exists( __NAMESPACE__ . '\\render' ) ) {
 	 * @param  array|Collection $data
 	 * @return string
 	 */
-	function render(string $name, $slugs = [], $data = [] ): string {
+	function render( string $name, $slugs = [], $data = [] ): string {
 
 		return view( $name, $slugs, $data )->render();
 	}
