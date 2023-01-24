@@ -25,6 +25,7 @@
 namespace Backdrop\Template\View;
 
 use function Backdrop\Template\Helpers\locate as locate_template;
+use Backdrop\Tools\Collection;
 
 /**
  * View class.
@@ -76,14 +77,13 @@ class View {
 	/**
 	 * Sets up the view properties.
 	 *
-	 * @since  	1.0.0
-	 * @access 	public
-	 * @param 	string 			$name
-	 * @param	string|array	$slugs
-	 * @param	object 			$data
-	 * @return void
+	 * @param string $name
+	 * @param string|array $slugs
+	 * @param Collection|null $data
+	 * @since    1.0.0
+	 * @access    public
 	 */
-	public function __construct( string $name, $slugs = [], $data = null ) {
+	public function __construct( string $name, $slugs = [], Collection $data = null ) {
 
 		$this->name  = $name;
 		$this->slugs = ( array ) $slugs;
