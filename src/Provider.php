@@ -19,10 +19,10 @@ namespace Backdrop\Template;
 use Backdrop\Core\ServiceProvider;
 use ReflectionException;
 use Backdrop\Template\Hierarchy\Component as Hierarchy;
-use Backdrop\Template\Hierarchy\Contracts\Hierarchy as HierarchyContracts;
+use Backdrop\Template\Contracts\Hierarchy as HierarchyContracts;
 use Backdrop\Template\Manager\Component as Manager;
-use Backdrop\Template\View\Contracts\Engine as EngineContract;
-use Backdrop\Template\View\Contracts\View as ViewContract;
+use Backdrop\Template\Contracts\Engine as EngineContract;
+use Backdrop\Template\Contracts\View as ViewContract;
 use Backdrop\Template\View\Engine;
 use Backdrop\Template\View\View;
 
