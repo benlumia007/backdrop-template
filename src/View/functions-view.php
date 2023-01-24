@@ -14,6 +14,7 @@
 namespace Backdrop\Template\View;
 
 use Backdrop\Proxies\App;
+use Backdrop\Tools\Collection;
 
 if ( ! function_exists( __NAMESPACE__ . '\\view' ) ) {
 	/**
@@ -23,11 +24,12 @@ if ( ! function_exists( __NAMESPACE__ . '\\view' ) ) {
 	 * @access public
 	 * @param  string            $name
 	 * @param  array|string      $slugs
+	 * @param  array|Collection $data
 	 * @return View
 	 */
-	function view( string $name, $slugs = [] ): View {
+	function view(string $name, $slugs = [], $data = [] ): View {
 
-		return App::resolve( Engine::class )->view( $name, $slugs );
+		return App::resolve( Engine::class )->view( $name, $slugs, $data );
 	}
 }
 
@@ -39,9 +41,10 @@ if ( ! function_exists( __NAMESPACE__ . '\\display' ) ) {
 	 * @access public
 	 * @param  string            $name
 	 * @param  array|string      $slugs
+	 * @param  array|Collection $data
 	 * @return void
 	 */
-	function display( string $name, $slugs = [] ) {
+	function display(string $name, $slugs = [], $data = [] ) {
 
 		view( $name, $slugs )->display();
 	}
@@ -55,9 +58,10 @@ if ( ! function_exists( __NAMESPACE__ . '\\render' ) ) {
 	 * @access public
 	 * @param  string            $name
 	 * @param  array|string      $slugs
+	 * @param  array|Collection $data
 	 * @return string
 	 */
-	function render( string $name, $slugs = [] ): string {
+	function render(string $name, $slugs = [], $data = [] ): string {
 
 		return view( $name, $slugs )->render();
 	}
